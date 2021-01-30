@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/End4.ogg-9448a93ae962aabf304573cc16deb71e.oggstr"
+
+[deps]
+
+source_file="res://assets/VoiceOvers/End4.ogg"
+dest_files=[ "res://.import/End4.ogg-9448a93ae962aabf304573cc16deb71e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

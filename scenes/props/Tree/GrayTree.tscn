@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Objects/Tree Assests/Dark Gray Tree.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/props/Tree/Tree.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Textures/bark.png" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
 
 [node name="GrayTree" instance=ExtResource( 2 )]
 
 [node name="MeshInstance" parent="." index="1"]
 mesh = ExtResource( 1 )
-material/0 = null
+material/0 = SubResource( 1 )

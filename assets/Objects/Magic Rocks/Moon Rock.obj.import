@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Moon Rock.obj-3a0b324849a4cabf4fe68aef986febbd.mesh"
+
+[deps]
+
+files=[ "res://.import/Moon Rock.obj-3a0b324849a4cabf4fe68aef986febbd.mesh" ]
+
+source_file="res://assets/Objects/Magic Rocks/Moon Rock.obj"
+dest_files=[ "res://.import/Moon Rock.obj-3a0b324849a4cabf4fe68aef986febbd.mesh", "res://.import/Moon Rock.obj-3a0b324849a4cabf4fe68aef986febbd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

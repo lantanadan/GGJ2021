@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Puzzle2-7.ogg-34185bc1c855d2b0434f9f3e5e7349cd.oggstr"
+
+[deps]
+
+source_file="res://assets/VoiceOvers/Puzzle2-7.ogg"
+dest_files=[ "res://.import/Puzzle2-7.ogg-34185bc1c855d2b0434f9f3e5e7349cd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Octo Rock.obj-1e737155a2ed3798e3bcfb7b91274311.mesh"
+
+[deps]
+
+files=[ "res://.import/Octo Rock.obj-1e737155a2ed3798e3bcfb7b91274311.mesh" ]
+
+source_file="res://assets/Objects/Magic Rocks/Octo Rock.obj"
+dest_files=[ "res://.import/Octo Rock.obj-1e737155a2ed3798e3bcfb7b91274311.mesh", "res://.import/Octo Rock.obj-1e737155a2ed3798e3bcfb7b91274311.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

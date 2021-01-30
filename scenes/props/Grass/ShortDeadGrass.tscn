@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Objects/Grass Assets/Short Dead Grass.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.282353, 0.32549, 0.188235, 1 )
+
+[node name="ShortDeadGrass" type="MeshInstance"]
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )

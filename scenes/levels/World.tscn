@@ -1,37 +1,39 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/Objects/GGJ_2021_Map_Test.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/visuals/Snowfall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/props/Tree/DarkGrayTree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/props/Tree/GrayTree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/props/Grass/ShortDeadGrass.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/props/Grass/TallDeadGrass.tscn" type="PackedScene" id=7]
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
 flags_unshaded = true
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 100, 1, 100 )
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=3]
 flags_unshaded = true
 flags_vertex_lighting = true
 flags_world_triplanar = true
 albedo_color = Color( 0.956863, 0.956863, 0.956863, 0.815686 )
 
-[sub_resource type="CubeMesh" id=5]
-material = SubResource( 4 )
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
 size = Vector3( 0.25, 0.25, 0.25 )
 
-[sub_resource type="ProceduralSky" id=6]
+[sub_resource type="ProceduralSky" id=5]
 sky_top_color = Color( 0.545098, 0.607843, 0.690196, 1 )
 sky_horizon_color = Color( 0.72549, 0.741176, 0.760784, 1 )
 ground_bottom_color = Color( 0.72549, 0.741176, 0.760784, 1 )
 ground_horizon_color = Color( 0.72549, 0.741176, 0.760784, 1 )
 
-[sub_resource type="Environment" id=7]
+[sub_resource type="Environment" id=6]
 background_mode = 2
-background_sky = SubResource( 6 )
+background_sky = SubResource( 5 )
 ambient_light_color = Color( 1, 1, 1, 1 )
 fog_enabled = true
 fog_color = Color( 0.792157, 0.811765, 0.835294, 1 )
@@ -50,11 +52,11 @@ glow_bloom = 0.44
 [node name="CSGMesh" type="CSGMesh" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.762114, 0 )
 mesh = ExtResource( 1 )
-material = SubResource( 8 )
+material = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28866, 1.19546, 2.38018 )
@@ -67,7 +69,7 @@ visible = true
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 16.0093, 0 )
 amount = 400
 lifetime = 5.0
-mesh = SubResource( 5 )
+mesh = SubResource( 4 )
 emission_box_extents = Vector3( 2, 2, 2 )
 flatness = 0.53
 
@@ -139,5 +141,37 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8604, 0, -12.431 )
 [node name="GrayTree11" parent="Trees" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7833, 0, -18.7849 )
 
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="ShortDeadGrass" parent="Spatial" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3178, 0, -2.62062 )
+
+[node name="ShortDeadGrass2" parent="Spatial" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8048, 0, -2.81331 )
+
+[node name="ShortDeadGrass3" parent="Spatial" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31431, 0, 13.0645 )
+
+[node name="ShortDeadGrass4" parent="Spatial" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5915, 0, -9.82731 )
+
+[node name="ShortDeadGrass5" parent="Spatial" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4818, 0, -16.8067 )
+
+[node name="TallDeadGrass" parent="Spatial" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8947, 0, -12.0642 )
+
+[node name="TallDeadGrass2" parent="Spatial" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3844, 0, -11.0658 )
+
+[node name="TallDeadGrass3" parent="Spatial" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1411, 0, 12.8131 )
+
+[node name="TallDeadGrass4" parent="Spatial" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3012, 0, 4.9089 )
+
+[node name="TallDeadGrass5" parent="Spatial" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.73618, 0, -25.9589 )
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 7 )
+environment = SubResource( 6 )
