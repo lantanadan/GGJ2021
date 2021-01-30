@@ -15,25 +15,50 @@ public class Player : KinematicBody
 	[Export]
 	public float MouseSensitivity = 0.05f;
 
+	[Export]
 	public Vector3 velocity = new Vector3();
 
+	[Export]
+	public int IdleWarmthLoss = 2;
+	[Export]
+	public int MovingWarmthLoss = 1;
+
+	private const float MAX_WARMTH = 100;
 	private Vector3 _direction = new Vector3();
+	private float _warmth = MAX_WARMTH;
 
 	private Camera _camera;
 	private Spatial _rotationPivot;
+	private ColdOverlay _coldOverlay;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_camera = GetNode<Camera>("RotationPivot/Camera");
 		_rotationPivot = GetNode<Spatial>("RotationPivot");
+		_coldOverlay = GetNode<ColdOverlay>("RotationPivot/Camera/CanvasLayer/ColdOverlay");
 		Input.SetMouseMode(Input.MouseMode.Captured);
+	}
+
+	public override void _Input(InputEvent @event)
+	{
+		if (@event is InputEventMouseMotion && Input.GetMouseMode() == Input.MouseMode.Captured)
+		{
+			InputEventMouseMotion mouseEvent = @event as InputEventMouseMotion;
+			_rotationPivot.RotateX(Mathf.Deg2Rad(-mouseEvent.Relative.y * MouseSensitivity));
+			RotateY(Mathf.Deg2Rad(-mouseEvent.Relative.x * MouseSensitivity));
+
+			Vector3 cameraRotation = _rotationPivot.RotationDegrees;
+			cameraRotation.x = Mathf.Clamp(cameraRotation.x, -70, 70);
+			_rotationPivot.RotationDegrees = cameraRotation;
+		}
 	}
 
 	public override void _PhysicsProcess(float delta)
 	{
 		ProcessInput(delta);
 		ProcessMovement(delta);
+		ProcessWarmth(delta);
 	}
 
 	private void ProcessInput(float delta)
@@ -92,17 +117,12 @@ public class Player : KinematicBody
 		velocity = MoveAndSlide(velocity, new Vector3(0, 1, 0), false, 4, Mathf.Deg2Rad(MaxSlopeAngle));
 	}
 
-	public override void _Input(InputEvent @event)
+	private void ProcessWarmth(float delta)
 	{
-		if (@event is InputEventMouseMotion && Input.GetMouseMode() == Input.MouseMode.Captured)
-		{
-			InputEventMouseMotion mouseEvent = @event as InputEventMouseMotion;
-			_rotationPivot.RotateX(Mathf.Deg2Rad(-mouseEvent.Relative.y * MouseSensitivity));
-			RotateY(Mathf.Deg2Rad(-mouseEvent.Relative.x * MouseSensitivity));
+		_warmth -= (velocity.Length() > 0.1 ? MovingWarmthLoss : IdleWarmthLoss) * delta;
+		_warmth = Mathf.Clamp(_warmth, 0, MAX_WARMTH);
+		_coldOverlay.Value = (float)(1.0 - (_warmth / MAX_WARMTH));
 
-			Vector3 cameraRotation = _rotationPivot.RotationDegrees;
-			cameraRotation.x = Mathf.Clamp(cameraRotation.x, -70, 70);
-			_rotationPivot.RotationDegrees = cameraRotation;
-		}
 	}
+	
 }

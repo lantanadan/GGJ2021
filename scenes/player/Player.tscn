@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/player/Player.cs" type="Script" id=1]
 [ext_resource path="res://scenes/player/FootprintEmitter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/ui/ColdOverlay.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.001
@@ -28,6 +29,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44889, 0 )
 
 [node name="Camera" type="Camera" parent="RotationPivot"]
 current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="RotationPivot/Camera"]
+layer = 2
+
+[node name="ColdOverlay" parent="RotationPivot/Camera/CanvasLayer" instance=ExtResource( 3 )]
+MaxColor = Color( 0.6, 0.819608, 0.847059, 1 )
+TransitionTime = 0.1
 
 [node name="FootprintEmitter" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212348, 0 )
