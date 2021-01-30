@@ -15,7 +15,8 @@ public class Player : KinematicBody
 	[Export]
 	public float MouseSensitivity = 0.05f;
 
-	private Vector3 _velocity = new Vector3();
+	public Vector3 velocity = new Vector3();
+
 	private Vector3 _direction = new Vector3();
 
 	private Camera _camera;
@@ -79,16 +80,16 @@ public class Player : KinematicBody
 	{
 		_direction.y = 0;
 		_direction = _direction.Normalized();
-		Vector3 hVelocity = _velocity;
+		Vector3 hVelocity = velocity;
 		hVelocity.y = 0;
 
 		Vector3 target = _direction * MaxSpeed;
 		float accel = _direction.Dot(hVelocity) > 0 ? Acceleration : Deacceleration;
 
 		hVelocity = hVelocity.LinearInterpolate(target, accel * delta);
-		_velocity.x = hVelocity.x;
-		_velocity.z = hVelocity.z;
-		_velocity = MoveAndSlide(_velocity, new Vector3(0, 1, 0), false, 4, Mathf.Deg2Rad(MaxSlopeAngle));
+		velocity.x = hVelocity.x;
+		velocity.z = hVelocity.z;
+		velocity = MoveAndSlide(velocity, new Vector3(0, 1, 0), false, 4, Mathf.Deg2Rad(MaxSlopeAngle));
 	}
 
 	public override void _Input(InputEvent @event)
