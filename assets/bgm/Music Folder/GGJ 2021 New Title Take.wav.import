@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GGJ 2021 New Title Take.wav-a5a842d68714c76efea5fd5a4985d967.sample"
+
+[deps]
+
+source_file="res://assets/bgm/Music Folder/GGJ 2021 New Title Take.wav"
+dest_files=[ "res://.import/GGJ 2021 New Title Take.wav-a5a842d68714c76efea5fd5a4985d967.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

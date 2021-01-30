@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Xylo 2.wav-076f035e5c25074e1e60ba930a909941.sample"
+
+[deps]
+
+source_file="res://assets/bgm/Music Folder/Percussion Samples/Xylo 2.wav"
+dest_files=[ "res://.import/Xylo 2.wav-076f035e5c25074e1e60ba930a909941.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

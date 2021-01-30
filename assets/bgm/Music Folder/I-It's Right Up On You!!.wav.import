@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/I-It's Right Up On You!!.wav-1655241414d7c97b200cdafcd6c6017e.sample"
+
+[deps]
+
+source_file="res://assets/bgm/Music Folder/I-It's Right Up On You!!.wav"
+dest_files=[ "res://.import/I-It's Right Up On You!!.wav-1655241414d7c97b200cdafcd6c6017e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
