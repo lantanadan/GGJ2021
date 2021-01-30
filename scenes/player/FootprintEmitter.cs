@@ -4,7 +4,7 @@ using System;
 public class FootprintEmitter : Spatial
 {   
     [Export]
-    public PackedScene FootprintScene = ResourceLoader.Load("res://scenes/props/Footprint.tscn") as PackedScene;
+    public PackedScene FootprintScene = ResourceLoader.Load("res://scenes/visuals/Footprint.tscn") as PackedScene;
     [Export]
     public float SpeedThreshold = 0.1f;
     

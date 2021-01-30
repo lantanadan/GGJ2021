@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/GGJ 2021 Map Test.obj-b6fe5a1b79c25fe95d323c7e5996849d.mesh"
+
+[deps]
+
+files=[ "res://.import/GGJ 2021 Map Test.obj-b6fe5a1b79c25fe95d323c7e5996849d.mesh" ]
+
+source_file="res://GGJ 2021 Map Test.obj"
+dest_files=[ "res://.import/GGJ 2021 Map Test.obj-b6fe5a1b79c25fe95d323c7e5996849d.mesh", "res://.import/GGJ 2021 Map Test.obj-b6fe5a1b79c25fe95d323c7e5996849d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

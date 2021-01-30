@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Dark Gray Tree.obj-05bcaee04df50649870f1150145a1ebd.mesh"
+
+[deps]
+
+files=[ "res://.import/Dark Gray Tree.obj-05bcaee04df50649870f1150145a1ebd.mesh" ]
+
+source_file="res://assets/Objects/Tree Assests/Dark Gray Tree.obj"
+dest_files=[ "res://.import/Dark Gray Tree.obj-05bcaee04df50649870f1150145a1ebd.mesh", "res://.import/Dark Gray Tree.obj-05bcaee04df50649870f1150145a1ebd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

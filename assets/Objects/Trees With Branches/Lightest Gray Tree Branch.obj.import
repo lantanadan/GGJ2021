@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Lightest Gray Tree Branch.obj-6e78f7c3d9df1e69a3fc47c68d632197.mesh"
+
+[deps]
+
+files=[ "res://.import/Lightest Gray Tree Branch.obj-6e78f7c3d9df1e69a3fc47c68d632197.mesh" ]
+
+source_file="res://assets/Objects/Trees With Branches/Lightest Gray Tree Branch.obj"
+dest_files=[ "res://.import/Lightest Gray Tree Branch.obj-6e78f7c3d9df1e69a3fc47c68d632197.mesh", "res://.import/Lightest Gray Tree Branch.obj-6e78f7c3d9df1e69a3fc47c68d632197.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

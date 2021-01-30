@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+proximity_fade_enable = true
+proximity_fade_distance = 1.0
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+size = Vector2( 1, 1 )
+
+[node name="Snowfall" type="CPUParticles"]
+amount = 200
+lifetime = 4.0
+fixed_fps = 45
+mesh = SubResource( 2 )
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+direction = Vector3( 0, -1, 0 )
+spread = 180.0
+gravity = Vector3( 0, -10, 0 )
+initial_velocity = 9.8
+initial_velocity_random = 1.0
+radial_accel = 10.0
+radial_accel_random = 0.3
+tangential_accel = 18.75
+angle = 162.0
+angle_random = 1.0

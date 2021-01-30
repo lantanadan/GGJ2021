@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tall Dead Grass.obj-f31ce13728b646a89fe2e599f79a7d0f.mesh"
+
+[deps]
+
+files=[ "res://.import/tall Dead Grass.obj-f31ce13728b646a89fe2e599f79a7d0f.mesh" ]
+
+source_file="res://assets/Objects/Grass Assets/tall Dead Grass.obj"
+dest_files=[ "res://.import/tall Dead Grass.obj-f31ce13728b646a89fe2e599f79a7d0f.mesh", "res://.import/tall Dead Grass.obj-f31ce13728b646a89fe2e599f79a7d0f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

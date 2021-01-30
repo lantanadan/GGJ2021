@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Short Dead Grass.obj-f32d8e8cb4d85946cd0d500efe0b81d9.mesh"
+
+[deps]
+
+files=[ "res://.import/Short Dead Grass.obj-f32d8e8cb4d85946cd0d500efe0b81d9.mesh" ]
+
+source_file="res://assets/Objects/Grass Assets/Short Dead Grass.obj"
+dest_files=[ "res://.import/Short Dead Grass.obj-f32d8e8cb4d85946cd0d500efe0b81d9.mesh", "res://.import/Short Dead Grass.obj-f32d8e8cb4d85946cd0d500efe0b81d9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

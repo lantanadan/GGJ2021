@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Blue Gray Branch.obj-5bbdb3016f2724f967e22681443ede4a.mesh"
+
+[deps]
+
+files=[ "res://.import/Blue Gray Branch.obj-5bbdb3016f2724f967e22681443ede4a.mesh" ]
+
+source_file="res://assets/Objects/Trees With Branches/Blue Gray Branch.obj"
+dest_files=[ "res://.import/Blue Gray Branch.obj-5bbdb3016f2724f967e22681443ede4a.mesh", "res://.import/Blue Gray Branch.obj-5bbdb3016f2724f967e22681443ede4a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

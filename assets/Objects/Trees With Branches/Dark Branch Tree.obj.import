@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Dark Branch Tree.obj-8fc57e8343d2d58af2ca20975a5170bf.mesh"
+
+[deps]
+
+files=[ "res://.import/Dark Branch Tree.obj-8fc57e8343d2d58af2ca20975a5170bf.mesh" ]
+
+source_file="res://assets/Objects/Trees With Branches/Dark Branch Tree.obj"
+dest_files=[ "res://.import/Dark Branch Tree.obj-8fc57e8343d2d58af2ca20975a5170bf.mesh", "res://.import/Dark Branch Tree.obj-8fc57e8343d2d58af2ca20975a5170bf.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
