@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Objects/GGJ_2021_Map_Test.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/visuals/Snowfall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/props/Tree/DarkGrayTree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/props/Tree/GrayTree.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 100, 1, 100 )
@@ -59,3 +61,71 @@ lifetime = 5.0
 mesh = SubResource( 5 )
 emission_box_extents = Vector3( 2, 2, 2 )
 flatness = 0.53
+
+[node name="Trees" type="Spatial" parent="."]
+
+[node name="DarkGrayTree" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5572, 0, 8.51277 )
+
+[node name="DarkGrayTree2" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.41722, 0, -20.6595 )
+
+[node name="DarkGrayTree3" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.8734, 0, -5.98923 )
+
+[node name="DarkGrayTree4" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0202, 0, -15.8479 )
+
+[node name="DarkGrayTree5" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9825, 0, -7.16688 )
+
+[node name="DarkGrayTree6" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7758, 0, 0.309308 )
+
+[node name="DarkGrayTree7" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4146, 0, -0.171241 )
+
+[node name="DarkGrayTree8" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.14131, 0, 13.9782 )
+
+[node name="DarkGrayTree9" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.182, 0, 8.21163 )
+
+[node name="DarkGrayTree10" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.50317, 0, 11.4153 )
+
+[node name="DarkGrayTree11" parent="Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9349, 0, -0.224636 )
+
+[node name="GrayTree" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0847, 0, 9.48854 )
+
+[node name="GrayTree2" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5208, 0, -3.53297 )
+
+[node name="GrayTree3" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71601, 0, -18.506 )
+
+[node name="GrayTree4" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3445, 0, -4.34051 )
+
+[node name="GrayTree5" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44145, 0, 10.0942 )
+
+[node name="GrayTree6" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7154, 0, 18.3773 )
+
+[node name="GrayTree7" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.032, 0, 18.0036 )
+
+[node name="GrayTree8" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5491, 0, 15.6009 )
+
+[node name="GrayTree9" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8016, 0, 6.20349 )
+
+[node name="GrayTree10" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8604, 0, -12.431 )
+
+[node name="GrayTree11" parent="Trees" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7833, 0, -18.7849 )
