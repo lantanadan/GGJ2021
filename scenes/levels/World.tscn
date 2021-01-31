@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/Objects/GGJ_2021_Map_Test.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/props/Boulder/BoulderTwo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/props/Boulder/BoulderOne.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/areas/Campfire.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/collectables/GranolaBar.tscn" type="PackedScene" id=11]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
@@ -215,3 +216,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4843, 0, -12.6685 )
 
 [node name="Campfire2" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3378, 0, 0.963102 )
+
+[node name="GranolaBar2" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12572, 0.181499, 2.19986 )
+
+[node name="GranolaBar" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5581, -11.2232, 0 )

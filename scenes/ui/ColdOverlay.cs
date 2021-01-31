@@ -33,7 +33,6 @@ public class ColdOverlay : Control
 
     private void UpdateOverlay(float newValue)
     {
-        GD.Print(newValue);
         _tween.InterpolateProperty(this, "modulate", RatioColor(_value), RatioColor(newValue),
             TransitionTime, Tween.TransitionType.Sine);
         _tween.Start();

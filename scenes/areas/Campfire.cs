@@ -7,6 +7,7 @@ public class Campfire : StaticBody
     {
         if (body is Player && body != null)
         {
+            GD.Print("Fire");
             Player p = body as Player;
             p.WarmUp();
         }

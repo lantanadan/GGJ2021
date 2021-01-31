@@ -15,7 +15,6 @@ public class Player : KinematicBody
 	[Export]
 	public float MouseSensitivity = 0.05f;
 
-	[Export]
 	public Vector3 velocity = new Vector3();
 
 	[Export]
@@ -71,6 +70,11 @@ public class Player : KinematicBody
 	public void StopWarmUp()
 	{
 		_isWarmingUp = false;
+	}
+
+	public void Heal(int amount)
+	{
+		_warmth += amount;
 	}
 
 
