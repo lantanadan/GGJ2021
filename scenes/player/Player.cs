@@ -27,6 +27,7 @@ public class Player : KinematicBody
 	private float _warmth = MAX_WARMTH;
 
 	private bool _isWarmingUp = false;
+	private bool[] _collectedRocks = {false, false, false, false, false, false};
 
 	private Camera _camera;
 	private Spatial _rotationPivot;
@@ -77,6 +78,10 @@ public class Player : KinematicBody
 		_warmth += amount;
 	}
 
+	public void CollectRock(int key)
+	{
+		_collectedRocks[key] = true;
+	}
 
 	private void ProcessInput(float delta)
 	{

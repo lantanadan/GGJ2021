@@ -1,10 +1,10 @@
 using Godot;
 using System;
 
-public class GranolaBar : Spatial
+public class MagicRock : Spatial
 {
     [Export]
-    public int WarmthToRestore = 100;
+    public int key; // 0="blank", 1="heart", 2="moon", 3="octo", 4="square", 5="star"
 
     public void _on_Area_body_entered(Node body)
     {
@@ -18,7 +18,7 @@ public class GranolaBar : Spatial
 
     private void GetCollectedBy(Player player)
     {
-        player.Heal(WarmthToRestore);
+        player.CollectRock(key);
         QueueFree();
     }
 }
