@@ -27,6 +27,8 @@ public class Player : KinematicBody
 	private Vector3 _direction = new Vector3();
 	private float _warmth = MAX_WARMTH;
 
+	private bool _isWarmingUp = false;
+
 	private Camera _camera;
 	private Spatial _rotationPivot;
 	private ColdOverlay _coldOverlay;
@@ -60,6 +62,17 @@ public class Player : KinematicBody
 		ProcessMovement(delta);
 		ProcessWarmth(delta);
 	}
+
+	public void WarmUp()
+	{
+		_isWarmingUp = true;
+	}
+
+	public void StopWarmUp()
+	{
+		_isWarmingUp = false;
+	}
+
 
 	private void ProcessInput(float delta)
 	{
@@ -119,10 +132,11 @@ public class Player : KinematicBody
 
 	private void ProcessWarmth(float delta)
 	{
-		_warmth -= (velocity.Length() > 0.1 ? MovingWarmthLoss : IdleWarmthLoss) * delta;
+		_warmth -= (velocity.Length() > 0.1 ? MovingWarmthLoss : IdleWarmthLoss) // lose more heat when idle
+			* (_isWarmingUp ? -3 : 1) // gain heat when at fire
+			* delta;
 		_warmth = Mathf.Clamp(_warmth, 0, MAX_WARMTH);
 		_coldOverlay.Value = (float)(1.0 - (_warmth / MAX_WARMTH));
-
 	}
 	
 }
