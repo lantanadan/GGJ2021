@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Objects/GGJ_2021_Map_Test.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://scenes/collectables/GranolaBar.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/collectables/MagicRockSet.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/levels/WorldEnvironment.tres" type="Environment" id=13]
+[ext_resource path="res://assets/VoiceOvers/Puzzle1-1.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/Sound Effects/winddddddd.ogg" type="AudioStream" id=15]
 
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
@@ -1068,5 +1070,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77299, 0, -6.43317 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 13 )
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true
+bus = "SFX"
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
+bus = "Voice"
 
 [editable path="MagicRockSet"]
