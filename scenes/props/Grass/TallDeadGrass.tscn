@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Objects/Grass Assets/tall Dead Grass.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/shaders/PSX Shaders/psx_lit.shader" type="Shader" id=2]
 
-[sub_resource type="SpatialMaterial" id=1]
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/specular_intensity = null
+shader_param/resolution = 256.0
+shader_param/cull_distance = 0.0
+shader_param/uv_scale = Vector2( 1, 1 )
+shader_param/uv_offset = Vector2( 0, 0 )
+
+[sub_resource type="SpatialMaterial" id=2]
+next_pass = SubResource( 1 )
 albedo_color = Color( 0.501961, 0.345098, 0.0941176, 1 )
 
 [node name="TallDeadGrass" type="MeshInstance"]
 mesh = ExtResource( 1 )
-material/0 = SubResource( 1 )
+material/0 = SubResource( 2 )

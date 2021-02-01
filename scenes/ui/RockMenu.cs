@@ -12,7 +12,7 @@ public class RockMenu : Control
 
     public override void _Ready()
     {
-        for (int i = 0; i < 5; i ++)
+        for (int i = 0; i < 6; i ++)
         {
             GD.Print(i.ToString());
             GD.Print(GetNode<RockButton>("CenterContainer/ColorRect/VBoxContainer/HBoxContainer/Rock" + i.ToString()).ToString());
@@ -79,7 +79,7 @@ public class RockMenu : Control
     private bool IsOrderCorrect()
     {
         if (_current_order.Count != 6) return false;
-        for (int i = 0; i < 5; i ++)
+        for (int i = 0; i < 6; i ++)
         {
             if (_current_order[i] != CorrectOrder[i]) return false;
         }

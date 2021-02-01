@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/Textures/stone02.png" type="Texture" id=8]
 
 [node name="RockSlot" type="TextureRect"]
+rect_scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

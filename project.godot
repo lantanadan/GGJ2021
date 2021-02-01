@@ -19,6 +19,14 @@ config/name="GGJ2021"
 run/main_scene="res://scenes/levels/World.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=300
+window/size/height=240
+window/size/fullscreen=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [input]
 
 ui_left={
