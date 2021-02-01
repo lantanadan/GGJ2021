@@ -13,25 +13,28 @@ public class Player : KinematicBody
 	[Export]
 	public float MaxSlopeAngle = 45.0f;
 	[Export]
+	public float Gravity = 9.8f;
+	[Export]
 	public float MouseSensitivity = 0.05f;
 
 	public Vector3 velocity = new Vector3();
 
 	[Export]
-	public int IdleWarmthLoss = 2;
+	public int IdleWarmthLoss = 4;
 	[Export]
-	public int MovingWarmthLoss = 1;
+	public int MovingWarmthLoss = 2;
 
 	private const float MAX_WARMTH = 100;
 	private Vector3 _direction = new Vector3();
 	private float _warmth = MAX_WARMTH;
 
 	private bool _isWarmingUp = false;
-	private bool[] _collectedRocks = {false, false, false, false, false, false};
+	//private bool[] _collectedRocks = {false, false, false, false, false, false};
 
 	private Camera _camera;
 	private Spatial _rotationPivot;
 	private ColdOverlay _coldOverlay;
+	private RockMenu _rockMenu;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -39,6 +42,7 @@ public class Player : KinematicBody
 		_camera = GetNode<Camera>("RotationPivot/Camera");
 		_rotationPivot = GetNode<Spatial>("RotationPivot");
 		_coldOverlay = GetNode<ColdOverlay>("RotationPivot/Camera/CanvasLayer/ColdOverlay");
+		_rockMenu = GetNode<RockMenu>("RotationPivot/Camera/CanvasLayer/RockMenu");
 		Input.SetMouseMode(Input.MouseMode.Captured);
 	}
 
@@ -80,7 +84,18 @@ public class Player : KinematicBody
 
 	public void CollectRock(int key)
 	{
-		_collectedRocks[key] = true;
+		//_collectedRocks[key] = true;
+		_rockMenu.CollectRock(key);
+	}
+
+	public void OpenRockMenu()
+	{
+		_rockMenu.Open();
+	}
+
+	public void CloseRockMenu()
+	{
+		_rockMenu.Close();
 	}
 
 	private void ProcessInput(float delta)
@@ -135,6 +150,7 @@ public class Player : KinematicBody
 
 		hVelocity = hVelocity.LinearInterpolate(target, accel * delta);
 		velocity.x = hVelocity.x;
+		velocity.y = -Gravity;
 		velocity.z = hVelocity.z;
 		velocity = MoveAndSlide(velocity, new Vector3(0, 1, 0), false, 4, Mathf.Deg2Rad(MaxSlopeAngle));
 	}

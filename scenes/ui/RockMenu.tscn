@@ -1,0 +1,164 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scenes/ui/RockButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ui/RockMenu.cs" type="Script" id=2]
+[ext_resource path="res://assets/Textures/stone00.png" type="Texture" id=3]
+[ext_resource path="res://assets/Textures/itemBox1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Textures/itemBox5.png" type="Texture" id=5]
+[ext_resource path="res://assets/Textures/stone04.png" type="Texture" id=6]
+[ext_resource path="res://assets/Textures/stone02.png" type="Texture" id=7]
+[ext_resource path="res://assets/Textures/itemBox3.png" type="Texture" id=8]
+[ext_resource path="res://assets/Textures/stone01.png" type="Texture" id=9]
+[ext_resource path="res://assets/Textures/itemBox4.png" type="Texture" id=10]
+[ext_resource path="res://assets/Textures/stone03.png" type="Texture" id=11]
+[ext_resource path="res://assets/Textures/stone05.png" type="Texture" id=12]
+[ext_resource path="res://assets/Textures/itemBox6.png" type="Texture" id=13]
+[ext_resource path="res://assets/Textures/itemBox2.png" type="Texture" id=14]
+[ext_resource path="res://scenes/ui/RockSlot.tscn" type="PackedScene" id=15]
+
+[node name="RockMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer"]
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.266667, 0.266667, 0.298039, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.0
+margin_top = -72.0
+margin_right = 202.0
+margin_bottom = 72.0
+custom_constants/separation = 8
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/ColorRect/VBoxContainer"]
+margin_right = 404.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="Rock0" parent="CenterContainer/ColorRect/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 64.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 3 )
+texture_disabled = ExtResource( 4 )
+
+[node name="Rock1" parent="CenterContainer/ColorRect/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
+ID = 1
+
+[node name="Rock2" parent="CenterContainer/ColorRect/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+ID = 2
+
+[node name="Rock3" parent="CenterContainer/ColorRect/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 11 )
+texture_disabled = ExtResource( 10 )
+ID = 3
+
+[node name="Rock4" parent="CenterContainer/ColorRect/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 14 )
+ID = 4
+
+[node name="Rock5" parent="CenterContainer/ColorRect/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 340.0
+margin_right = 404.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 7 )
+texture_disabled = ExtResource( 8 )
+ID = 5
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/ColorRect/VBoxContainer"]
+margin_top = 72.0
+margin_right = 404.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 72 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.278431, 0.305882, 0.34902, 1 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -217.0
+margin_right = 217.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RockSlot0" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect/HBoxContainer2" instance=ExtResource( 15 )]
+margin_left = 192.0
+margin_right = 192.0
+margin_bottom = 64.0
+
+[node name="RockSlot1" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect/HBoxContainer2" instance=ExtResource( 15 )]
+margin_left = 202.0
+margin_right = 202.0
+margin_bottom = 64.0
+
+[node name="RockSlot2" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect/HBoxContainer2" instance=ExtResource( 15 )]
+margin_left = 212.0
+margin_right = 212.0
+margin_bottom = 64.0
+
+[node name="RockSlot3" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect/HBoxContainer2" instance=ExtResource( 15 )]
+margin_left = 222.0
+margin_right = 222.0
+margin_bottom = 64.0
+
+[node name="RockSlot4" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect/HBoxContainer2" instance=ExtResource( 15 )]
+margin_left = 232.0
+margin_right = 232.0
+margin_bottom = 64.0
+
+[node name="RockSlot5" parent="CenterContainer/ColorRect/VBoxContainer/ColorRect/HBoxContainer2" instance=ExtResource( 15 )]
+margin_left = 242.0
+margin_right = 242.0
+margin_bottom = 64.0

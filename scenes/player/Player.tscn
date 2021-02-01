@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/player/Player.cs" type="Script" id=1]
 [ext_resource path="res://scenes/player/FootprintEmitter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/ui/ColdOverlay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/ui/RockMenu.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.001
@@ -36,6 +37,8 @@ layer = 2
 [node name="ColdOverlay" parent="RotationPivot/Camera/CanvasLayer" instance=ExtResource( 3 )]
 MaxColor = Color( 0.6, 0.819608, 0.847059, 1 )
 TransitionTime = 0.1
+
+[node name="RockMenu" parent="RotationPivot/Camera/CanvasLayer" instance=ExtResource( 4 )]
 
 [node name="FootprintEmitter" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212348, 0 )

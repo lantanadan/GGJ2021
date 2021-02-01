@@ -18,6 +18,7 @@ public class MagicRock : Spatial
 
     private void GetCollectedBy(Player player)
     {
+        if (key < 0 || key > 5){GD.PrintErr("bad key!");}
         player.CollectRock(key);
         QueueFree();
     }

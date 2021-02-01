@@ -10,7 +10,6 @@ public class GranolaBar : Spatial
     {
         if (body is Player && body != null)
         {
-
             Player player = body as Player;
             GetCollectedBy(player);
         }
