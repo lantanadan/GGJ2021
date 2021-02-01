@@ -1045,6 +1045,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5581, -11.2232, 0 )
 [node name="GranolaBar2" parent="GranolaBars" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12572, 0.181499, 2.19986 )
 
+[node name="GranolaBar3" parent="GranolaBars" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.245, 0.181499, -51.8072 )
+
+[node name="GranolaBar4" parent="GranolaBars" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80.4591, 0.181499, 42.0466 )
+
+[node name="GranolaBar5" parent="GranolaBars" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.0603, 0.181499, -98.8987 )
+
+[node name="GranolaBar6" parent="GranolaBars" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.4656, 0.181499, -22.4985 )
+
+[node name="GranolaBar7" parent="GranolaBars" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.856, 0.181499, -74.859 )
+
 [node name="MagicRockSet" parent="." instance=ExtResource( 12 )]
 
 [node name="BlankRock" parent="MagicRockSet/Rocks" index="0"]
