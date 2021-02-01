@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/player/Player.cs" type="Script" id=1]
 [ext_resource path="res://scenes/player/FootprintEmitter.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/Idle Hand Animation Assets/IdleHands00_small.png" type="Texture" id=5]
 [ext_resource path="res://assets/Idle Hand Animation Assets/IdleHands01_small.png" type="Texture" id=6]
 [ext_resource path="res://assets/Idle Hand Animation Assets/IdleHands02_small.png" type="Texture" id=7]
+[ext_resource path="res://assets/shaders/crt_material.tres" type="Material" id=8]
 
 [sub_resource type="CylinderMesh" id=1]
 top_radius = 0.001
@@ -67,6 +68,15 @@ MaxColor = Color( 0.6, 0.819608, 0.847059, 1 )
 TransitionTime = 0.1
 
 [node name="RockMenu" parent="RotationPivot/Camera/CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="ColorRect" type="ColorRect" parent="RotationPivot/Camera/CanvasLayer"]
+material = ExtResource( 8 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.517647 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FootprintEmitter" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.212348, 0 )
